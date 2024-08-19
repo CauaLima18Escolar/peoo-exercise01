@@ -40,4 +40,4 @@ function groupByFirstLetter(theArray){
 
 const arr = ["banana", "apple", "date", "eggplant", "cherry", "avocado", "durian", "dragon fruit", "blueberry"]
 
-console.log(groupByFirstLetter(arr))
+console.log(groupByFirstLetter(arr))    
