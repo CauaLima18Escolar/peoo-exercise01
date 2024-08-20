@@ -5,7 +5,6 @@ countWords("A quick brown fox"); // retorna 4 */
 
 function countWords(str){
     let strWords = str.trim().split(' ').length;
-
     return strWords;
 };
 
