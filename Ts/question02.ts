@@ -4,7 +4,7 @@ são separadas por espaços em branco. Por exemplo:
 countWords("A quick brown fox"); // retorna 4 */
 
 function countWords(str: string): number {
-    let strWords = str.trim().split(' ').length;
+    const strWords = str.trim().split(' ').length;
     return strWords;
 };
 

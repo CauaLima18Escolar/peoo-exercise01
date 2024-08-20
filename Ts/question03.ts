@@ -5,7 +5,7 @@ isPalindrome("A man a plan a canal Panama"); // retorna true
 isPalindrome("Hello"); // retorna false */
 
 function isPalindrome(str: string): boolean {
-    let reverseStr = str.toLowerCase().replaceAll(' ', '').split('').reverse().join('');
+    const reverseStr = str.toLowerCase().replaceAll(' ', '').split('').reverse().join('');
     str = str.toLowerCase().replaceAll(' ', '');
 
     return reverseStr === str;

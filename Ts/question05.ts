@@ -5,10 +5,10 @@ findDuplicate([1, 2, 3, 4, 2]); // retorna 2
 findDuplicate([1, 2, 3, 4, 5]); // retorna null */
 
 function findDuplicate(numbersArray: number[]): number | null{
-    const seen = [] // Array que armazena todos os números que já foram vistos antes
+    const seen: number[] = [] // Array que armazena todos os números que já foram vistos antes
 
     for(let indexOfNumber = 0; indexOfNumber < numbersArray.length; indexOfNumber++){
-        let num = numbersArray[indexOfNumber]
+        const num = numbersArray[indexOfNumber]
         
         if (seen.includes(num)){ // O array de números vistos inclue o número atual?
             return num
@@ -20,6 +20,6 @@ function findDuplicate(numbersArray: number[]): number | null{
     return null
 };
 
-let numArray = [1, 3, 2, 4, 5, 2 ]
+const numArray = [1, 3, 2, 4, 5, 2 ]
 
 console.log(findDuplicate(numArray))

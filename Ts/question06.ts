@@ -5,8 +5,8 @@ restante das strings deve ser adicionado ao final do array resultante. Por exemp
 concatenateArrays();
 // retorna ["a1", "b2", "c3", "4"] */
 
-function concatenateArrays(firstArray: (any[]), secondArray: any[]): any[] | null{
-    let concatenatedArr = [] // Array que vai servir de base para receber a concatenação dos demais
+function concatenateArrays<B>(firstArray: B[], secondArray: B[]): B[] | null{
+    let concatenatedArr: B[] = [] // Array que vai servir de base para receber a concatenação dos demais
     let index = 0
 
     if (secondArray.length < firstArray.length){
@@ -15,8 +15,8 @@ function concatenateArrays(firstArray: (any[]), secondArray: any[]): any[] | nul
 
     for(; index < firstArray.length; index++){
 
-        let concatenated = firstArray[index] + secondArray[index]
-        concatenatedArr.push(concatenated)
+        const concatenated = String(firstArray[index]) + String(secondArray[index]);
+        concatenatedArr.push(concatenated as B);
     };
 
     if (secondArray.length > firstArray.length){
@@ -25,8 +25,5 @@ function concatenateArrays(firstArray: (any[]), secondArray: any[]): any[] | nul
 
     return concatenatedArr
 };
-
-let fruitsArray = ['Maça', 'Uva', 'Morango']
-let vegetablesArray = ['Brócolis', 'Tomate', 'Cenoura']
 
 console.log(concatenateArrays(["a", "b", "c"], ["1", "2", "3", "4", "5", "6"]))

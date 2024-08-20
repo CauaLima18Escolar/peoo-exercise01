@@ -4,18 +4,18 @@ for negativo, rotacione o array para a esquerda. Por exemplo:
 rotateArray([1, 2, 3, 4, 5], 2); // retorna [4, 5, 1, 2, 3]
 rotateArray([1, 2, 3, 4, 5], -2); // retorna [3, 4, 5, 1, 2] */
 
-function rotateArray(theArray: any[], num: number): any[]{
+function rotateArray<T>(theArray: T[], num: number): T[]{
 
     if (num > 0){
         for(num; num !== 0; num--){
-            let removedNum = theArray.splice(theArray.length - 1, 1)
+            const removedNum = theArray.splice(theArray.length - 1, 1)
             theArray.unshift(removedNum[0])
         };
     };
 
     if (num < 0){
         for(num; num !== 0; num++){
-            let removedNum = theArray.splice(0, 1)
+            const removedNum = theArray.splice(0, 1)
             theArray.push(removedNum[0])
         };
     };

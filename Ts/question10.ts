@@ -4,7 +4,7 @@ das letras em cada palavra permanece a mesma. Por exemplo:
 reverseWords("The quick brown fox"); // retorna "fox brown quick The" */
 
 function reverseWords(str: string): string{
-    let reverseStr = str.trim().split(' ').reverse().join(' ')
+    const reverseStr = str.trim().split(' ').reverse().join(' ')
     return reverseStr
 };
 

@@ -14,7 +14,7 @@ function compressString(str: string): string | null{
         return null;
     };
 
-    for(let letter of str){
+    for(const letter of str){
 
         if (seen === letter){
             count += 1;

@@ -13,11 +13,11 @@ c: ["cherry"]
 */
 
 function groupByFirstLetter(theArray: string[]): { [key: string]: string[] }{
-    let obj = {};
+    const obj: { [key: string]: string[]} = {};
 
-    for(let word of theArray){
+    for(const word of theArray){
 
-        let firstLetter = word.charAt(0); // Pega a primeira letra da primeira palavra do array
+        const firstLetter = word.charAt(0); // Pega a primeira letra da primeira palavra do array
         let arraySection = [];
 
         for(let wordIndex = 0; wordIndex < theArray.length; wordIndex++){ // Esse loop serve para percorrer todo o array e analisar se mais alguma palavra do array possui a inicial obtida anteriormente.

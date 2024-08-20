@@ -3,14 +3,14 @@ números inteiros. O segundo array é idêntico ao primeiro, exceto por um eleme
 faltando. A função deve retornar o elemento que está faltando. Por exemplo:
 findMissingElement([1, 2, 3, 4, 5], [2, 3, 1, 5]); // retorna 4 */
 
-function findMissingElement(firstArray: any[], secondArray: any[]): boolean | any{
-    for(let element of firstArray){
+function findMissingElement<T>(firstArray: T[], secondArray: T[]): T | null {
+    for(const element of firstArray){
         if(!secondArray.includes(element)){
             return element
         };
     };
 
-    return true;
+    return null;
 };
 
-console.log(findMissingElement([1, 2, 3, 4, 5], [2, 4, 3, 1, 5]));
+console.log(findMissingElement([1, 2, 3, 4, 5, "A"], [2, 4, 3, 1, 5]));
