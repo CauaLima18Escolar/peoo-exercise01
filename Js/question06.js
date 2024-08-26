@@ -4,7 +4,7 @@ mesmas posições nos arrays de entrada. Se os arrays tiverem tamanhos diferente
 restante das strings deve ser adicionado ao final do array resultante. Por exemplo:
 concatenateArrays();
 // retorna ["a1", "b2", "c3", "4"] */
-
+ 
 function concatenateArrays(firstArray, secondArray){
     let concatenatedArr = [] // Array que vai servir de base para receber a concatenação dos demais
     let index = 0
@@ -22,7 +22,7 @@ function concatenateArrays(firstArray, secondArray){
     return concatenatedArr
 };
 
-let fruitsArray = ['Maça', 'Uva', 'Morango']
-let vegetablesArray = ['Brócolis', 'Tomate', 'Cenoura']
+//let fruitsArray = ['Maça', 'Uva', 'Morango']
+//let vegetablesArray = ['Brócolis', 'Tomate', 'Cenoura']
 
 console.log(concatenateArrays(["a", "b", "c"], ["1", "2", "3", "4"]))
